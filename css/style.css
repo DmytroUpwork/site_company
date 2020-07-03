@@ -1,22 +1,3 @@
-* {
-  outline: none !important;
-}
-
-img {
-  width: 100%;
-}
-
-header {
-  height: 100vh;
-}
-
-header > img {
-  position: absolute;
-  right: 2%;
-  top: 20%;
-  width: 51%;
-}
-
 .body_slides {
   list-style: none;
   margin: 0;
@@ -62,6 +43,99 @@ header > img {
   }
 }
 
+* {
+  outline: none !important;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 100vh;
+}
+
+header > img {
+  position: absolute;
+  right: 2%;
+  top: 36%;
+  width: 41%;
+}
+
+header > nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+header > nav a {
+  color: white;
+}
+
+header > nav > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header > nav > div > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+  padding: 0;
+}
+
+header > nav > div > ul > li {
+  color: white;
+  margin-left: 34px;
+  font-size: 20px;
+}
+
+header > nav > div > ul > li > a {
+  text-decoration: none;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+header > nav > div > ul > li > a:hover {
+  color: red;
+}
+
+#fon_video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+}
+
 @media screen and (max-width: 992px) {
   .navbar_collapse, .hidden_mobile_li {
     position: absolute;
@@ -70,6 +144,9 @@ header > img {
   .navbar_collapse {
     display: none;
     z-index: 9;
+  }
+  .navbar_collapse > ul {
+    display: block;
   }
   .hidden_mobile_li {
     display: block;
@@ -88,11 +165,20 @@ header > img {
 }
 
 .navbar-toggler {
+  display: none;
   position: relative;
   border: none;
   width: 36px;
   height: 25px;
   z-index: 9;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-toggler {
+    display: block;
+    background: transparent;
+    margin-top: 5%;
+  }
 }
 
 .navbar-toggler > span {

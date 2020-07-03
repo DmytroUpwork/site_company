@@ -6,23 +6,20 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css" /> -->
     <link rel="stylesheet" href="./css/style.css" />
     <title>My company</title>
   </head>
   <body>
     <header>
-      <!-- ----------------------------- body slides -->
-      <ul class="body_slides">
-        <li></li>
-        <li></li>
-      </ul>
-      <!-- ----------------------------------------- -->
+      <video width="100%" preload="auto" autoplay="autoplay" loop muted id="fon_video">
+        <source src="./video/seovideo.mp4" type="video/mp4">
+      </video>
+      
       <img src="./img/5381.png" alt="" />
-      <nav
-        class="navbar navbar-expand-lg navbar-light justify-content-between"
-      >
-        <a class="navbar-brand text-white" href="#"
+      
+      <nav>
+        <a href="#"
           ><img src="./img/logo.svg" alt="logo"
         /></a>
         <button class="navbar-toggler" type="button">
@@ -31,8 +28,8 @@
           <span class="navbar_toggler_line"></span>
           <span class="navbar_toggler_line"></span>
         </button>
-        <div class="navbar_collapse justify-content-end">
-          <ul class="navbar-nav">
+        <div class="navbar_collapse">
+          <ul>
             <li class="nav-item"></li>
             <li class="nav-item">
               <a class="nav-link" href="#">Главная</a>
@@ -54,8 +51,16 @@
       </nav>
     </header>
 
+    
+
     <main>
       <section>
+      <!-- ----------------------------- body slides -->
+        <ul class="body_slides">
+          <li></li>
+          <li></li>
+        </ul>
+      <!-- ----------------------------------------- -->
         <div style="display:none" class="pageTextSource">Наши проекты и результаты</div>
         <h2 class="pageText"></h2>
       </section>
