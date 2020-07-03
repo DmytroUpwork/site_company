@@ -171,13 +171,13 @@ header > nav > div > ul > li > a:hover {
   width: 36px;
   height: 25px;
   z-index: 9;
+  background: transparent;
+  margin-top: 5%;
 }
 
 @media screen and (max-width: 992px) {
   .navbar-toggler {
     display: block;
-    background: transparent;
-    margin-top: 5%;
   }
 }
 
