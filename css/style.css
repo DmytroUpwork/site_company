@@ -16,13 +16,13 @@
 }
 
 .body_slides li:nth-child(1) {
-  background-image: url("/img/16661.jpg");
+  background-image: url("/img/fone_code_two.jpg");
 }
 
 .body_slides li:nth-child(2) {
   -webkit-animation-delay: 6.0s;
   -moz-animation-delay: 6.0s;
-  background-image: url("/img/164.webp");
+  background-image: url("/img/fone_code_one.webp");
 }
 
 @-webkit-keyframes anim_slides {
