@@ -16,13 +16,13 @@
 }
 
 .body_slides li:nth-child(1) {
-  background-image: url("/img/fone_code_two.jpg");
+  background-image: url("../img/fone_code_two.jpg");
 }
 
 .body_slides li:nth-child(2) {
   -webkit-animation-delay: 6.0s;
   -moz-animation-delay: 6.0s;
-  background-image: url("/img/fone_code_one.webp");
+  background-image: url("../img/fone_code_one.webp");
 }
 
 @-webkit-keyframes anim_slides {
@@ -43,103 +43,11 @@
   }
 }
 
-* {
-  outline: none !important;
-}
-
-img {
-  width: 100%;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  height: 100vh;
-}
-
-header > img {
-  position: absolute;
-  right: 2%;
-  top: 36%;
-  width: 41%;
-}
-
-header > nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 100%;
-  position: absolute;
-  top: 0;
-}
-
-header > nav a {
-  color: white;
-}
-
-header > nav > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-header > nav > div > ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  list-style: none;
-  padding: 0;
-}
-
-header > nav > div > ul > li {
-  color: white;
-  margin-left: 34px;
-  font-size: 20px;
-}
-
-header > nav > div > ul > li > a {
-  text-decoration: none;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-header > nav > div > ul > li > a:hover {
-  color: red;
-}
-
-#fon_video {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
-  background-size: cover;
-}
-
 @media screen and (max-width: 992px) {
   .navbar_collapse, .hidden_mobile_li {
     position: absolute;
-    top: 99%;
+    top: 15%;
+    left: 3%;
   }
   .navbar_collapse {
     display: none;
@@ -155,6 +63,7 @@ header > nav > div > ul > li > a:hover {
     opacity: 0;
     -webkit-transition: 1s;
     transition: 1s;
+    padding-bottom: 20px;
   }
   .nav-item a {
     text-transform: uppercase;
@@ -191,26 +100,131 @@ header > nav > div > ul > li > a:hover {
   left: 0;
 }
 
-.navbar-toggler .navbar_toggler_line:nth-child(1) {
+.navbar-toggler > span:first-child {
   top: 0;
 }
 
-.navbar-toggler .navbar_toggler_line:nth-child(4) {
+.navbar-toggler > span:last-child {
   bottom: 0;
 }
 
-.navbar_toggler_line_1_active, .navbar_toggler_line_4_active {
+.navbar_line_active_1 {
   opacity: 0;
 }
 
-.navbar_toggler_line_2_active {
+.navbar_line_active_2 {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
-.navbar_toggler_line_3_active {
+.navbar_line_active_3 {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+#fon_video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+}
+
+* {
+  outline: none !important;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 100vh;
+}
+
+header > img {
+  position: absolute;
+  right: 2%;
+  top: 36%;
+  width: 41%;
+}
+
+header > nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0 20px;
+}
+
+header > nav a {
+  color: white;
+}
+
+header > nav > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header > nav > div > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+  padding: 0;
+}
+
+header > nav > div > ul > li {
+  color: white;
+  margin-left: 34px;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 1480px) {
+  header > nav > div > ul > li {
+    margin-left: 14px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  header > nav > div > ul > li {
+    margin-left: 14px;
+    font-size: 16px;
+  }
+}
+
+header > nav > div > ul > li > a {
+  text-decoration: none;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+header > nav > div > ul > li > a:hover {
+  color: red;
 }
 
 main section {
@@ -223,7 +237,7 @@ main section h2 {
   position: absolute;
   right: 0;
   margin: auto;
-  width: 121px;
+  width: 88px;
 }
 
 main section:nth-child(1) {
@@ -231,11 +245,15 @@ main section:nth-child(1) {
 }
 
 main section:nth-child(1) h2 {
-  width: 429px;
+  width: 319px;
 }
 
 main section:nth-child(2) {
   background: #bebebe;
+}
+
+main section:nth-child(2) h2 {
+  width: 144px;
 }
 
 main section:nth-child(3) {
@@ -244,5 +262,63 @@ main section:nth-child(3) {
 
 main section:nth-child(4) {
   background: #bebebe;
+}
+
+main section:nth-child(5) {
+  background: #d6ebc9;
+}
+
+.social_media_button {
+  position: absolute;
+  top: 25%;
+  width: 50px;
+  height: 50px;
+}
+
+.wrapper {
+  position: absolute;
+  top: 34%;
+  display: none;
+}
+
+.wrapper a:not(:first-child) {
+  cursor: pointer;
+  margin: 0 12px 12px;
+  height: 41px;
+  width: 41px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.wrapper .instagram {
+  background: url("/img/social/instagram.svg") no-repeat;
+}
+
+.wrapper .skype {
+  background: url("/img/social/skype.svg") no-repeat;
+}
+
+.wrapper .vkontakte {
+  background: url("/img/social/vk.svg") no-repeat;
+}
+
+.wrapper .email {
+  background: url("/img/social/email.svg") no-repeat;
+}
+
+.wrapper .telegram {
+  background: url("/img/social/telegram.svg") no-repeat;
+}
+
+.wrapper_active {
+  display: block;
+}
+
+.social_link_active {
+  opacity: 1 !important;
 }
 /*# sourceMappingURL=style.css.map */

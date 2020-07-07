@@ -12,11 +12,11 @@
     opacity: 0 
     animation: anim_slides 12s linear infinite 0s
     &:nth-child(1) 
-      background-image: url('/img/fone_code_two.jpg')
+      background-image: url('../img/fone_code_two.jpg')
     &:nth-child(2)
       -webkit-animation-delay: 6.0s 
       -moz-animation-delay: 6.0s 
-      background-image: url('/img/fone_code_one.webp')
+      background-image: url('../img/fone_code_one.webp')
 @-webkit-keyframes anim_slides 
   0% 
     opacity: 0
@@ -39,68 +39,13 @@
     opacity: 0
   100% 
     opacity: 0
-//====================================================
-  
-* 
-  outline: none!important
-img 
-  width: 100%
-body 
-  margin: 0
-  padding: 0
-header 
-  height: 100vh
-  > img 
-    position: absolute
-    right: 2%
-    top: 36%
-    width: 41%
-  // & > div 
-  //   width: 100vh
-  & > nav
-    display: flex
-    justify-content: space-around
-    width: 100%
-    position: absolute
-    top: 0
-    a 
-      color: white
-    > div 
-      display: flex
-      justify-content: flex-end
-      > ul 
-        display: flex
-        align-items: flex-end
-        flex-direction: row
-        list-style: none
-        padding: 0
-        > li 
-          color: white
-          margin-left: 34px
-          font-size: 20px
-          > a 
-            text-decoration: none
-            transition: 1s
-            &:hover
-              color: red
-#fon_video
-  position: fixed;
-  top: 50%
-  left: 50%
-  min-width: 100%
-  min-height: 100%
-  width: auto
-  height: auto
-  z-index: -100
-  transform: translateX(-50%) translateY(-50%)
-  background-size: cover
-
 
 //button menu mobile ========================================
 @media screen and ( max-width: 992px )
   .navbar_collapse, .hidden_mobile_li
     position: absolute
-    top: 99%
+    top: 15%;
+    left: 3%
   .navbar_collapse
     display: none
     z-index: 9
@@ -111,16 +56,11 @@ header
   .nav-item 
     opacity: 0
     transition: 1s
+    padding-bottom: 20px
     a 
       text-transform: uppercase
   .active_li_mobile_menu
     opacity: 1
-
-
-
-
-
-
 .navbar-toggler 
   display: none
   position: relative
@@ -139,17 +79,95 @@ header
     transition: 0.5s
     position: absolute
     left: 0
-  .navbar_toggler_line:nth-child(1)
-    top: 0
-  .navbar_toggler_line:nth-child(4)
-    bottom: 0
-.navbar_toggler_line_1_active, .navbar_toggler_line_4_active
+    &:first-child
+      top: 0
+    &:last-child
+      bottom: 0
+.navbar_line_active_1
   opacity: 0
-.navbar_toggler_line_2_active
+.navbar_line_active_2
   transform: rotate(-45deg) 
-.navbar_toggler_line_3_active
+.navbar_line_active_3
   transform: rotate(45deg)
-//===========================================================
+
+//video background home ==================================
+#fon_video
+  position: fixed;
+  top: 50%
+  left: 50%
+  min-width: 100%
+  min-height: 100%
+  width: auto
+  height: auto
+  z-index: -100
+  transform: translateX(-50%) translateY(-50%)
+  background-size: cover
+
+// gallery work project ====================================
+// #gallery
+//   width: 640px
+//   margin: 0 auto
+//   text-align: center
+//   position: relative
+//   z-index: 9
+//   .photos 
+//     display: flex
+//     img
+//       display: none
+//       &:first-child 
+//         display: block
+//   .buttons 
+//     margin-top: 20px
+
+
+// page html ================================================
+* 
+  outline: none!important
+img 
+  width: 100%
+body 
+  margin: 0
+  padding: 0
+header 
+  height: 100vh
+  > img 
+    position: absolute
+    right: 2%
+    top: 36%
+    width: 41%
+  & > nav
+    display: flex
+    justify-content: space-around
+    padding: 0 20px
+    // position: fixed
+    // z-index: 99
+    a 
+      color: white
+    > div 
+      display: flex
+      justify-content: flex-end
+      > ul 
+        display: flex
+        align-items: flex-end
+        flex-direction: row
+        list-style: none
+        padding: 0
+        > li 
+          color: white
+          margin-left: 34px
+          font-size: 25px
+          @media screen and ( max-width: 1480px )
+            margin-left: 14px;
+            font-size: 20px
+          @media screen and ( max-width: 1200px )
+            margin-left: 14px;
+            font-size: 16px
+          > a 
+            text-decoration: none
+            transition: 1s
+            &:hover
+              color: red
+
 main 
   section
     position: relative
@@ -159,15 +177,50 @@ main
       position: absolute
       right: 0
       margin: auto
-      width: 121px
+      width: 88px
   & section:nth-child(1)
     background: #d6ebc9
     h2 
-      width: 429px
+      width: 319px
   & section:nth-child(2)
     background: #bebebe
+    h2
+      width: 144px
   & section:nth-child(3)
-    background: #d6ebc9 
+    background: #d6ebc9
   & section:nth-child(4)
     background: #bebebe
+  & section:nth-child(5)
+    background: #d6ebc9
     
+.social_media_button
+  position: absolute
+  top: 25%
+  width: 50px
+  height: 50px
+.wrapper 
+  position: absolute;
+  top: 34%;
+  display: none
+  a:not(:first-child)
+    cursor: pointer
+    margin: 0 12px 12px
+    height: 41px
+    width: 41px
+    display: flex
+    opacity: 0
+    transition: 0.5s
+  .instagram 
+    background: url('/img/social/instagram.svg') no-repeat
+  .skype
+    background: url('/img/social/skype.svg') no-repeat
+  .vkontakte
+    background: url('/img/social/vk.svg') no-repeat
+  .email
+    background: url('/img/social/email.svg') no-repeat
+  .telegram
+    background: url('/img/social/telegram.svg') no-repeat
+.wrapper_active
+  display: block
+.social_link_active 
+  opacity: 1 !important
