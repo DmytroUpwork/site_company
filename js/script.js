@@ -52,13 +52,6 @@ for (const $section of $sections) {
     const $visible = $section.querySelector('.pageText');
     showSectionLetters($source, $visible, 0);
   };
-  // $section = function () {
-  //   if (section.style.class = 'active') {
-  //     let $source = $section.querySelector('.pageTextSource');
-  //     let $visible = $section.querySelector('.pageText');
-  //     showSectionLetters($source, $visible, 0);
-  //   }
-  // };
 }
 const showSectionLetters = ($source, $visible, marker) => {
   if ($visible.innerHTML.length === $source.innerHTML.length) return;
